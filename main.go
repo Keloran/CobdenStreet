@@ -38,6 +38,6 @@ func main() {
 	http.Handle("/", http.FileServer(box))
 	err = http.ListenAndServe(port, nil)
 	if err != nil {
-		log.Fatalf("http server err: %w", err)
+		log.Fatalf("http server err: %+v", err)
 	}
 }
