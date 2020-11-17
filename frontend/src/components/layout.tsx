@@ -4,7 +4,6 @@ import React, {
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
 } from 'react-router-dom';
 import {
   Container
@@ -15,7 +14,7 @@ import Navbar from "./navbar";
 import MainPage from "../pages";
 import Shopping from "../pages/shopping";
 import Recipe from "../pages/recipe";
-import ToDo from "../pages/todo";
+import Tasks from "../pages/tasks";
 import Meals from "../pages/meals";
 
 class Layout extends Component {
@@ -25,11 +24,11 @@ class Layout extends Component {
         <Router>
           <Navbar />
 
-          <Container text style={{ marginTop: '7em' }}>
+          <Container text className='mainArea'>
             <Route path="/" exact component={MainPage} />
             <Route path="/shopping" exact component={Shopping} />
             <Route path="/recipe" exact component={Recipe} />
-            <Route path="/todo" exact component={ToDo} />
+            <Route path="/tasks" exact component={Tasks} />
             <Route path="/meals" exact component={Meals} />
             <Route path="/house" exact component={House} />
           </Container>

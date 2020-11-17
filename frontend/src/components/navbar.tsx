@@ -22,7 +22,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default class Navbar extends Component {
-  state = { activeItem: 'home' };
+  state = { activeItem: '' };
 
   handleItemClick = (event: MouseEvent, data: any) => {
     this.setState({ activeItem: data.name });
@@ -46,9 +46,9 @@ export default class Navbar extends Component {
             <FontAwesomeIcon icon={faUtensils} className='menuIcon' />
             Recipe
           </Menu.Item>
-          <Menu.Item as={ NavLink } to='/todo' name='todo' active={ activeItem === 'todo' } onClick={ this.handleItemClick }>
+          <Menu.Item as={ NavLink } to='/tasks' name='tasks' active={ activeItem === 'tasks' } onClick={ this.handleItemClick }>
             <FontAwesomeIcon icon={faListAlt} className='menuIcon' />
-            ToDo
+            Task List
           </Menu.Item>
           <Menu.Item as={ NavLink } to='/meals' name='meals' active={ activeItem === 'meals' } onClick={ this.handleItemClick }>
             <FontAwesomeIcon icon={faHamburger} className='menuIcon' />
